@@ -1,0 +1,167 @@
+{
+        "intents": [
+          {
+            "tag": "greeting",
+            "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+            "responses": [
+              "Hello, thanks for visiting! How can I assist you today?",
+              "Good to see you again! What can I do for you?",
+              "Hi there! How can I help you today?"
+            ],
+            "follow_up": {
+              "question": "Is there something specific you're looking for?",
+              "options": ["Yes", "No", "Just browsing", "Need help with something else"],
+              "responses": {
+                "Yes": "Great! Please tell me more about what you need.",
+                "No": "Alright, feel free to browse around. Would you like to hear about our new arrivals?",
+                "Just browsing": "Take your time! If you need help, I'm here.",
+                "Need help with something else": "Sure! What do you need help with?"
+              }
+            },
+            "context_set": ""
+          },
+          {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye"],
+            "responses": [
+              "See you later! Is there anything else before you go?",
+              "Have a nice day! Need help with anything else?",
+              "Bye! Come back again soon. Would you like to subscribe to our updates?"
+            ],
+            "follow_up": {
+              "question": "Would you like to leave feedback or subscribe for updates?",
+              "options": ["Leave feedback", "Subscribe", "No, thank you"],
+              "responses": {
+                "Leave feedback": "Please let us know your thoughts! Your feedback helps us improve.",
+                "Subscribe": "Great! You are now subscribed to our updates. Is there anything else you need?",
+                "No, thank you": "No problem! Have a great day."
+              }
+            }
+          },
+          {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful"],
+            "responses": [
+              "Happy to help! Is there anything else you need?",
+              "Any time! Need assistance with something else?",
+              "My pleasure! Would you like to learn more about our services?"
+            ],
+            "follow_up": {
+              "question": "Would you like to share how we helped you today?",
+              "options": ["Yes", "No", "Maybe later"],
+              "responses": {
+                "Yes": "We're glad to hear that! Please tell us more.",
+                "No": "No worries! If you need more help, just ask.",
+                "Maybe later": "Sure, feel free to come back whenever you're ready."
+              }
+            }
+          },
+          {
+            "tag": "hours",
+            "patterns": ["What hours are you open?", "What are your hours?", "When are you open?"],
+            "responses": [
+              "We're open every day from 9am to 9pm. Does this work for your schedule?",
+              "Our hours are 9am to 9pm every day. Do you need help planning your visit?"
+            ],
+            "follow_up": {
+              "question": "Would you like to schedule a visit?",
+              "options": ["Yes, schedule a visit", "No, just checking hours"],
+              "responses": {
+                "Yes, schedule a visit": "Perfect! When would you like to come by?",
+                "No, just checking hours": "Got it! If you have any other questions, feel free to ask."
+              }
+            }
+          },
+          {
+            "tag": "mopeds",
+            "patterns": ["Which mopeds do you have?", "What kinds of mopeds are there?", "What do you rent?"],
+            "responses": [
+              "We rent Yamaha, Piaggio, and Vespa mopeds. Which one are you interested in?",
+              "We have Piaggio, Vespa, and Yamaha mopeds. Would you like to know more about any specific model?"
+            ],
+            "follow_up": {
+              "question": "Would you like to hear about our rental rates or insurance options?",
+              "options": ["Rental rates", "Insurance options", "Both", "Neither"],
+              "responses": {
+                "Rental rates": "Our rental rates vary by model. Would you like a detailed breakdown?",
+                "Insurance options": "We offer comprehensive insurance options. Want to know more?",
+                "Both": "Sure! Let me give you the details on both rental rates and insurance options.",
+                "Neither": "Alright! If you need more information later, just let me know."
+              }
+            }
+          },
+          {
+            "tag": "payments",
+            "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?"],
+            "responses": [
+              "We accept VISA, Mastercard, and AMEX. Do you prefer to pay with a card or cash?",
+              "We accept most major credit cards. Would you like more details on payment options?"
+            ],
+            "follow_up": {
+              "question": "Would you like to know about our other payment methods or discounts?",
+              "options": ["Other payment methods", "Discounts", "Both", "No, thank you"],
+              "responses": {
+                "Other payment methods": "We also accept digital wallets like PayPal and Apple Pay.",
+                "Discounts": "We offer discounts for long-term rentals and early bookings. Interested?",
+                "Both": "We accept digital wallets and offer discounts for early bookings. Need more info?",
+                "No, thank you": "No worries! Let me know if you need anything else."
+              }
+            }
+          },
+          {
+            "tag": "opentoday",
+            "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+            "responses": [
+              "We're open every day from 9am to 9pm. Would you like to visit us today?",
+              "Our hours today are 9am to 9pm. Do you need help with anything specific?"
+            ],
+            "follow_up": {
+              "question": "Are you planning to visit today or later?",
+              "options": ["Today", "Later", "Just checking"],
+              "responses": {
+                "Today": "Great! We'll be ready for your visit.",
+                "Later": "Good to know! Let me know if you need help planning your visit.",
+                "Just checking": "Got it! If you have any more questions, feel free to ask."
+              }
+            }
+          },
+          {
+            "tag": "rental",
+            "patterns": ["Can we rent a moped?", "I'd like to rent a moped", "How does this work?"],
+            "responses": [
+              "Are you looking to rent today or later this week?",
+              "We'd be happy to help with your rental. When would you like to pick it up?"
+            ],
+            "context_set": "rentalday",
+            "follow_up": {
+              "question": "Would you like to know about rental terms, insurance options, or available models?",
+              "options": ["Rental Terms", "Insurance Options", "Available Models", "All of the above"],
+              "responses": {
+                "Rental Terms": "Our rentals are available for daily and weekly terms. Would you like to know the rates?",
+                "Insurance Options": "We offer various insurance options. Would you like to hear about them?",
+                "Available Models": "We have several models available. Want to know which ones?",
+                "All of the above": "Sure! Let me give you all the details."
+              }
+            }
+          },
+          {
+            "tag": "today",
+            "patterns": ["today"],
+            "responses": [
+              "For rentals today, please call 1-800-MYMOPED. Need help with anything else?",
+              "Same-day rentals are available. Call 1-800-MYMOPED. Is there anything else I can assist with?"
+            ],
+            "context_filter": "rentalday",
+            "follow_up": {
+              "question": "Would you like to reserve your moped now or get more information?",
+              "options": ["Reserve now", "More information", "Not sure yet"],
+              "responses": {
+                "Reserve now": "Excellent! Let me assist you with the reservation.",
+                "More information": "Sure! What would you like to know more about?",
+                "Not sure yet": "No rush! Take your time, and let me know when you're ready."
+              }
+            }
+          }
+        ]
+      }
+      
